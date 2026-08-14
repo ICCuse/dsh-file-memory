@@ -1,0 +1,59 @@
+{
+    "peerDependencies":  {
+                             "@deepseek-ai/cordis":  "^4.0.1",
+                             "@deepseek-ai/schemastery":  "^3.18.1"
+                         },
+    "version":  "0.1.0",
+    "license":  "MIT",
+    "files":  [
+                  "lib/index.js",
+                  "lib/invariant.js",
+                  "lib/types/**/*.d.ts",
+                  "src/**/*.ts"
+              ],
+    "types":  "lib/types/index.d.ts",
+    "name":  "dsh-file-memory",
+    "type":  "module",
+    "exports":  {
+                    "./package.json":  "./package.json",
+                    "./invariant":  {
+                                        "types":  "./lib/types/invariant.d.ts",
+                                        "default":  "./lib/invariant.js"
+                                    },
+                    "./cordis.patch.yml":  "./cordis.patch.yml",
+                    "./src/*":  "./src/*",
+                    ".":  {
+                              "types":  "./lib/types/index.d.ts",
+                              "default":  "./lib/index.js"
+                          }
+                },
+    "description":  "File-backed working memory tools for DeepSeek Harness: memorize/recall key premises verbatim in a session notes file so they survive context compaction losslessly",
+    "dsh":  {
+                "bundle":  {
+                               "patch":  "./cordis.patch.yml"
+                           }
+            },
+    "keywords":  [
+                     "dsh",
+                     "dsh-plugin",
+                     "deepseek-harness"
+                 ],
+    "scripts":  {
+                    "test":  "vitest run",
+                    "typecheck":  "tsc --noEmit"
+                },
+    "devDependencies":  {
+                            "vitest":  "^4.0.0",
+                            "@deepseek-ai/schemastery":  "^3.18.1",
+                            "@deepseek-ai/dsh-agent-loop":  "^0.0.1-rc.1",
+                            "@deepseek-ai/dsh-agent":  "^0.0.1-rc.1",
+                            "@deepseek-ai/dsh-llm":  "^0.0.1-rc.1",
+                            "@deepseek-ai/dsh-tools":  "^0.0.1-rc.1",
+                            "@deepseek-ai/cordis":  "^4.0.1",
+                            "@deepseek-ai/dsh-agent-loop-testkit":  "^0.0.1-rc.1",
+                            "typescript":  "^5.6.0",
+                            "@deepseek-ai/dsh-compaction":  "^0.0.1-rc.1",
+                            "@deepseek-ai/dsh-session":  "^0.0.1-rc.1"
+                        },
+    "main":  "lib/index.js"
+}

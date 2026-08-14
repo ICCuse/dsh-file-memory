@@ -1,0 +1,4 @@
+# dsh-file-memory bundle patch: one insert over the profile root.
+- insert:
+    - id: dsh-file-memory
+      name: 'dsh-file-memory'
